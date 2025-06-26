@@ -27,7 +27,7 @@ Overall, using Code::Blocks gave me both a smooth coding experience and a better
 
 *OUTPUT*
 
-
+![Image](https://github.com/user-attachments/assets/38eadaa1-8f36-4bb3-ae0f-79098040c82b)
 
 
 
