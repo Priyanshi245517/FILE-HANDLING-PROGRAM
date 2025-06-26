@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int ch;
+    FILE*fp;
+    //first we will create a file using pointer
+fp=fopen("file.txt","w");
+if(fp==NULL){
+   printf("error detected ,file can't be opened\n ");
+    return 1;
+}
+
+//writing the data in the file.
+printf("Here is the file I created \n");
+fclose(fp);
+
+//moving forward we just want to read the file we created and the data we stored in it.
+fp=fopen("file.txt","r");
+if(fp==NULL){
+    printf("error detected, file can't be read\n");
+    return 1;
+}
+while((ch=fgetc(fp)) !=EOF){
+    putchar(ch);
+}
+fclose(fp);
+
+//Using the appending operation we will add another chunk of data without disturbing the previously written data.
+fp=fopen("file.txt","a");
+if(fp==NULL){
+    printf("error detected,file can't be appended\n ");
+    return 1;
+}
+printf("Here more data is provided hence the file is now modified\n");
+fclose(fp);
+//In the above program we created ,wrote,read ,and appended a file helping in better understanding the concept.
+return 0;
+}
+
